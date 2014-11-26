@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+body {
+    background-color:#EEFFFF;
+    font-size: 12pt;
+    margin: 3px;
+}
+h1 {
+    background-color:#006600;
+    color:#ffffff;
+    font-size:18pt;
+    padding:3px;
+}
+
