@@ -12,3 +12,8 @@ h1 {
     padding:3px;
 }
 
+td {
+    padding: 5px;
+    background-color: #fff;
+}
+

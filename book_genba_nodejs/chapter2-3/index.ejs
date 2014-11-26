@@ -15,6 +15,17 @@ var d = dt.getDay();
 <h1><%=title %></h1>
 <p><%=message %></p>
 <p>Today : <%=y + " Year " + (m+1) + " Month " + d + " Day" %> .</p>
+<% for(var i=0; i<datas.length; i++){ %>
+
+<table>
+<tr>
+<td><%= datas[i].name %></td>
+<td><%= datas[i].mail %></td>
+<td><%= datas[i].tel %></td>
+</tr>
+<% } %>
+</table>
+
 </body>
 </html>
 

@@ -6,6 +6,12 @@ var ejs = require('ejs');
 var index = fs.readFileSync('./index.ejs','utf8');
 var style = fs.readFileSync('./style.css','utf8');
 
+var datas = [
+    {'name':'taro', 'mail':'taro@yamada', 'tel':'090-9999-9999'},
+    {'name':'hanako', 'mail':'hanako@flower', 'tel':'080-8888-8888'},
+    {'name':'ichiro', 'mail':'ichiro@baseball', 'tel':'070-7777-7777'}
+];
+
 var server = http.createServer();
 server.on('request', doRequest);
 server.listen(1337);
@@ -17,7 +23,8 @@ function doRequest(req, res){
 	console.log('/');
 	var tmp = ejs.render(index, {
 	    title: "Index Page",
-	    message: "これはサンプルページです。"
+	    message: "これはサンプルページです。",
+	    datas:datas
 	});
 	res.setHeader('Content-Type', 'text/html');
 	res.write(tmp);
